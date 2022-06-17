@@ -28,7 +28,7 @@ function getUseriInfo() {
 
         },
         success: function (res) {
-            console.log(res);
+
             if (res.status !== 0) {
                 return layui.layer.msg('获取用户信息失败')
             }
@@ -37,7 +37,7 @@ function getUseriInfo() {
         },
         // COMPLETE回调函数，无论失败还是成功，最后一步都是调用这个函数
         complete: function (res) {
-            console.log(res);
+
             if (res.responseJSON.status == 1) {
                 localStorage.removeItem('token')
                 location.href = './login.html'

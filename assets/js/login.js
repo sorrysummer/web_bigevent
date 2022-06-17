@@ -14,6 +14,7 @@ $(function () {
     let form = layui.form
     form.verify({
         // 自定义校验规则
+        // 把这个属性添加给layui-verify属性
         pwd: [/^[\S]{6,12}$/, '密码六到12位不能有空格'],
         // 校验两次密码是否一致
         repwd: function (value) {
